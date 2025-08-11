@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ממשק מורה - ניהול ציונים</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>מערכת ניהול ציונים - מורה</h1>
+    </header>
+
+    <main>
+      <section class="grade-entry">
+        <h2>הזנת ציון חדש</h2>
+        <form id="gradeForm">
+          <div class="form-group">
+            <label for="studentId">תעודת זהות תלמיד:</label>
+            <input type="text" id="studentId" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="studentName">שם תלמיד:</label>
+            <input type="text" id="studentName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">מקצוע:</label>
+            <input type="text" id="subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="score">ציון (0-100):</label>
+            <input type="number" id="score" min="0" max="100" required>
+          </div>
+          
+          <button type="submit">שמור ציון</button>
+        </form>
+        <div id="message"></div>
+      </section>
+
+      <section class="grade-view">
+        <h2>צפייה בציונים</h2>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="חיפוש לפי ת.ז. תלמיד">
+          <button onclick="searchGrades()">חפש</button>
+        </div>
+        <div id="gradesResults"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/teacher.js"></script>
+</body>
+</html>

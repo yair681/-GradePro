@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ממשק תלמיד - צפייה בציונים</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>מערכת צפייה בציונים - תלמיד</h1>
+    </header>
+
+    <main>
+      <section class="student-info">
+        <h2>הצגת ציונים</h2>
+        <div class="form-group">
+          <label for="studentId">הזן תעודת זהות:</label>
+          <input type="text" id="studentId" required>
+          <button onclick="loadGrades()">הצג ציונים</button>
+        </div>
+      </section>
+
+      <section class="grades-display">
+        <div id="studentInfo"></div>
+        <table id="gradesTable">
+          <thead>
+            <tr>
+              <th>מקצוע</th>
+              <th>ציון</th>
+              <th>תאריך</th>
+            </tr>
+          </thead>
+          <tbody id="gradesList"></tbody>
+        </table>
+        <div id="averageDisplay"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/student.js"></script>
+</body>
+</html>
